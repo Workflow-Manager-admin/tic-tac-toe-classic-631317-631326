@@ -93,6 +93,39 @@
   }
 }
 
+/* Game board styles */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: var(--border-color);
+  border-radius: 16px;
+}
+
+.game-square {
+  aspect-ratio: 1;
+  background-color: var(--bg-primary);
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-square:hover {
+  background-color: var(--bg-secondary);
+  transform: scale(1.02);
+}
+
+.game-square:active {
+  transform: scale(0.98);
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
   .theme-toggle {
@@ -100,5 +133,15 @@
     right: 10px;
     padding: 8px 16px;
     font-size: 12px;
+  }
+  
+  .game-board {
+    max-width: 280px;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .game-square {
+    font-size: 1.8rem;
   }
 }
